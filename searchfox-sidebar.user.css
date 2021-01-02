@@ -1,0 +1,51 @@
+/* ==UserStyle==
+@name           SearchFox Sidebar
+@namespace      github.com/dannycolin/searchfox-sidebar
+@version        0.1.0
+@description    Transform the headerbar as a sidebar
+@author         Danny Colin
+@homepageURL    github.com/dannycolin/searchfox-sidebar
+@updateURL      github.com/dannycolin/searchfox-sidebar/raw/master/searchfox-sidebar.user.css
+@license				MPL-2.0
+==/UserStyle== */
+
+@-moz-document domain("searchfox.org") {
+	body {
+	  flex-direction: row;
+	}
+
+	form::before {
+		content: "SearchFox";
+		font-size: 2rem;
+		font-weight: bold;
+		margin: 4px;
+	}
+
+	#fixed-header {
+		width: 350px;
+	}
+
+	.h-flex-container {
+	  flex-direction: column;
+	  align-items: start;
+	}
+
+	#query-section {
+	  width: 100%;
+	  margin: 16px 0;
+	}
+
+	#path-section {
+	  width: 100%;
+	  margin: 16px 0;
+	}
+
+	.v-flex-container {
+	  flex-direction: row;
+	  gap: 16px;
+	}
+
+	.panel {
+	  top: 8px;
+	}
+}
