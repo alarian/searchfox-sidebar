@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.1 - 2021-01-03
+- Fix userstyle metadata
+
 ## v0.2.0 - 2021-01-03
 
 - Move panelbox to the sidebar

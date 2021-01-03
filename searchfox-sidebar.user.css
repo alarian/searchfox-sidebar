@@ -1,10 +1,12 @@
 /* ==UserStyle==
 @name           SearchFox Sidebar
-@namespace      github.com/dannycolin/searchfox-sidebar
-@version        0.2.0
+@namespace      com.dannycolin.searchfox-sidebar
+@version        0.2.1
 @description    Transform the headerbar as a sidebar
 @author         Danny Colin
-@license        MPL-2.0
+@homepageURL    https://github.com/dannycolin/searchfox-sidebar
+@updateURL      https://github.com/dannycolin/searchfox-sidebar/raw/master/searchfox-sidebar.user.css
+@license				MPL-2.0
 ==/UserStyle== */
 
 @-moz-document domain("searchfox.org") {
