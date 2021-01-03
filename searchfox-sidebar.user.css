@@ -1,51 +1,90 @@
 /* ==UserStyle==
 @name           SearchFox Sidebar
 @namespace      github.com/dannycolin/searchfox-sidebar
-@version        0.1.0
+@version        0.2.0
 @description    Transform the headerbar as a sidebar
 @author         Danny Colin
-@homepageURL    github.com/dannycolin/searchfox-sidebar
-@updateURL      github.com/dannycolin/searchfox-sidebar/raw/master/searchfox-sidebar.user.css
-@license				MPL-2.0
+@license        MPL-2.0
 ==/UserStyle== */
 
 @-moz-document domain("searchfox.org") {
-	body {
-	  flex-direction: row;
-	}
+ :root {
+  --sidebar-bg: #f5f5f5;
+  --sidebar-fg: #0c0c0d;
+  --navigation-bg: #e5e5e5;
+ }
 
-	form::before {
-		content: "SearchFox";
-		font-size: 2rem;
-		font-weight: bold;
-		margin: 4px;
-	}
+ body {
+   flex-direction: row;
+ }
 
-	#fixed-header {
-		width: 350px;
-	}
+ form::before {
+  content: "SearchFox";
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 4px;
+ }
 
-	.h-flex-container {
-	  flex-direction: column;
-	  align-items: start;
-	}
+ #fixed-header {
+  width: 250px;
+ }
+ .search-box {
+  background-color: var(--sidebar-bg);
+  background-image: none;
+  color: var(--sidebar-fg);
+ }
 
-	#query-section {
-	  width: 100%;
-	  margin: 16px 0;
-	}
+ .h-flex-container {
+   flex-direction: column;
+   align-items: start;
+ }
 
-	#path-section {
-	  width: 100%;
-	  margin: 16px 0;
-	}
+ #query-section {
+   width: 100%;
+   margin: 16px 0;
+ }
 
-	.v-flex-container {
-	  flex-direction: row;
-	  gap: 16px;
-	}
+ #path-section {
+   width: 100%;
+   margin: 16px 0;
+ }
 
-	.panel {
-	  top: 8px;
-	}
+ .v-flex-container {
+   gap: 16px;
+ }
+
+ .panel {
+  background-color: var(--sidebar-bg);
+  border: none;
+  color: var(--sidebar-fg);
+  left: 0;
+   top: 500px;
+  width: 250px;
+ }
+ .panel section a {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-fg);
+  text-decoration: underline;
+ }
+ .panel section a:hover {
+  text-decoration: underline;
+ }
+ #panel-toggle {
+  background-color: var(--navigation-bg);
+  color: var(--sidebar-fg);
+  font-weight: bold;
+  margin-bottom: 8px;
+ }
+
+ @media (min-width: 1024px) {
+  #fixed-header {
+   width: 350px;
+  }
+  .v-flex-container {
+    flex-direction: row;
+  }
+  .panel {
+   width: 350px;
+  }
+ }
 }
